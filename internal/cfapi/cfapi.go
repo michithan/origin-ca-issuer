@@ -100,7 +100,7 @@ func (c *Client) Sign(ctx context.Context, req *SignRequest) (*SignResponse, err
 	}
 
 	r.Header.Add("User-Agent", "github.com/cloudflare/origin-ca-issuer")
-	r.Header.Add("X-Auth-User-Service-Key", string(c.serviceKey))
+	r.Header.Add("Authorization", fmt.Sprintf("Bearer %d", c.serviceKey))
 
 	resp, err := c.client.Do(r)
 	if err != nil {
