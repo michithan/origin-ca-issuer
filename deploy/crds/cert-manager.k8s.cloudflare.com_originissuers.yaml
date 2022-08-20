@@ -41,6 +41,12 @@ spec:
                 description: Auth configures how to authenticate with the Cloudflare
                   API.
                 properties:
+                  authMethod:
+                    description: AuthMethod that should be used for the API. Token or Key.
+                    enum:                
+                    - Token
+                    - Key
+                    type: string
                   serviceKeyRef:
                     description: ServiceKeyRef authenticates with an API Service Key.
                     properties:
