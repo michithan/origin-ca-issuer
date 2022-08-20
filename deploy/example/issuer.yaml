@@ -7,7 +7,6 @@ metadata:
 spec:
   requestType: OriginECC
   auth:
-    method: Key
     serviceKeyRef:
       name: service-key
       key: key

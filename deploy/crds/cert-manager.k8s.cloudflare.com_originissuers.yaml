@@ -41,14 +41,21 @@ spec:
                 description: Auth configures how to authenticate with the Cloudflare
                   API.
                 properties:
-                  method:
-                    description: Method that should be used for the API. Token or Key. 
-                      Defaults to Key.
-                    enum:                
-                    - Key
-                    - Token
-                    type: string
-                    default: Key
+                  apiTokenRef:
+                    description: ApiTokenRef authenticates with an API Token.
+                    properties:
+                      key:
+                        description: Key of the secret to select from. Must be a valid
+                          API Token.
+                        type: string
+                      name:
+                        description: Name of the secret in the OriginIssuer's namespace
+                          to select from.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   serviceKeyRef:
                     description: ServiceKeyRef authenticates with an API Service Key.
                     properties:
