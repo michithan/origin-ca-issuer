@@ -41,8 +41,8 @@ spec:
                 description: Auth configures how to authenticate with the Cloudflare
                   API.
                 properties:
-                  authMethod:
-                    description: AuthMethod that should be used for the API. Token or Key. 
+                  method:
+                    description: Method that should be used for the API. Token or Key. 
                       Defaults to Key.
                     enum:                
                     - Key
