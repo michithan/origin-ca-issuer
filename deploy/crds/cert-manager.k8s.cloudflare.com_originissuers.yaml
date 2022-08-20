@@ -42,11 +42,13 @@ spec:
                   API.
                 properties:
                   authMethod:
-                    description: AuthMethod that should be used for the API. Token or Key.
+                    description: AuthMethod that should be used for the API. Token or Key. 
+                      Defaults to Key.
                     enum:                
-                    - Token
                     - Key
+                    - Token
                     type: string
+                    default: Key
                   serviceKeyRef:
                     description: ServiceKeyRef authenticates with an API Service Key.
                     properties:
